@@ -20,3 +20,16 @@ management:
     enabled: true
     sampling:
       probability: 1.0
+
+springdoc:
+  swagger-ui:
+    urls:
+      - name: account
+        url: /v3/api-docs/account
+      - name: loan
+        url: /v3/api-docs/loan
+      - name: card
+        url: /v3/api-docs/card
+    use-root-path: true
+  cache:
+    disabled: true
