@@ -8,6 +8,8 @@ spring:
       host: redis
       port: 6379
       password: "{cipher}72f6a7d004cec8a7558dd0a94bd59b3b10205cfdad18d890d510e57ed17c5d7f44554bd293cdd529d1192202dad75c3d9c5ef970f16dab4e0c4d66f2df708b38"
+      timeout: 1s
+      connect-timeout: 2s
   cloud:
     gateway:
       discovery:
