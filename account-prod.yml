@@ -9,3 +9,14 @@ account:
   onCallSupport:
     - (453) 392-4829
     - (236) 203-0384
+
+spring:
+  output:
+    ansi:
+      enabled: always
+
+management:
+  tracing:
+    enabled: true
+    sampling:
+      probability: 1.0

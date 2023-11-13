@@ -9,3 +9,14 @@ account:
   onCallSupport:
     - (666) 265-3765
     - (666) 734-8371
+
+spring:
+  output:
+    ansi:
+      enabled: always
+
+management:
+  tracing:
+    enabled: true
+    sampling:
+      probability: 1.0

@@ -9,3 +9,14 @@ card:
   onCallSupport:
     - (412) 419-3491
     - (915) 382-1932
+
+spring:
+  output:
+    ansi:
+      enabled: always
+
+management:
+  tracing:
+    enabled: true
+    sampling:
+      probability: 1.0

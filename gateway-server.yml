@@ -9,3 +9,14 @@ eureka:
     fetchRegistry: true
     serviceUrl:
       defaultZone: http://localhost:8070/eureka/
+
+spring:
+  output:
+    ansi:
+      enabled: always
+
+management:
+  tracing:
+    enabled: true
+    sampling:
+      probability: 1.0

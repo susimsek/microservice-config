@@ -9,3 +9,14 @@ account:
   onCallSupport:
     - (555) 555-1234
     - (555) 523-1345
+
+spring:
+  output:
+    ansi:
+      enabled: always
+
+management:
+  tracing:
+    enabled: true
+    sampling:
+      probability: 1.0

@@ -9,3 +9,14 @@ loan:
   onCallSupport:
     - (785) 545-6565
     - (853) 546-3467
+
+spring:
+  output:
+    ansi:
+      enabled: always
+
+management:
+  tracing:
+    enabled: true
+    sampling:
+      probability: 1.0

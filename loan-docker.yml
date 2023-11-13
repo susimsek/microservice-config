@@ -1,8 +1,8 @@
 server:
-  port: 8080
+  port: 8090
 spring:
   datasource:
-    url: jdbc:postgresql://postgresql:5432/accountdb
+    url: jdbc:postgresql://postgresql:5432/loandb
     username: easybank
     password: "{cipher}9e37167bf33b458463119a7927279b4f53ea984472903a0c2b61197a8739714b"
     hikari:

@@ -9,3 +9,14 @@ card:
   onCallSupport:
     - (310) 875-4367
     - (201) 236-1267
+
+spring:
+  output:
+    ansi:
+      enabled: always
+
+management:
+  tracing:
+    enabled: true
+    sampling:
+      probability: 1.0

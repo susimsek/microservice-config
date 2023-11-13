@@ -9,3 +9,15 @@ loan:
   onCallSupport:
     - (723) 656-8709
     - (156) 342-0956
+
+
+spring:
+  output:
+    ansi:
+      enabled: always
+
+management:
+  tracing:
+    enabled: true
+    sampling:
+      probability: 1.0

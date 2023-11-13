@@ -9,3 +9,14 @@ loan:
   onCallSupport:
     - (452) 456-2176
     - (546) 764-8934
+
+spring:
+  output:
+    ansi:
+      enabled: always
+
+management:
+  tracing:
+    enabled: true
+    sampling:
+      probability: 1.0

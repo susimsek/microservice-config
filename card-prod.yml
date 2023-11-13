@@ -9,3 +9,14 @@ card:
   onCallSupport:
     - (617) 432-2356
     - (936) 564-8721
+
+spring:
+  output:
+    ansi:
+      enabled: always
+
+management:
+  tracing:
+    enabled: true
+    sampling:
+      probability: 1.0
