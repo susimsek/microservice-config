@@ -11,6 +11,8 @@ account:
     - (236) 203-0384
 
 spring:
+  main:
+    allow-bean-definition-overriding: true
   output:
     ansi:
       enabled: always

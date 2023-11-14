@@ -11,6 +11,8 @@ card:
     - (201) 236-1267
 
 spring:
+  main:
+    allow-bean-definition-overriding: true
   output:
     ansi:
       enabled: always

@@ -11,6 +11,8 @@ account:
     - (666) 734-8371
 
 spring:
+  main:
+    allow-bean-definition-overriding: true
   output:
     ansi:
       enabled: always

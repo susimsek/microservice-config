@@ -2,6 +2,8 @@ server:
   port: 8072
 
 spring:
+  main:
+    allow-bean-definition-overriding: true
   output:
     ansi:
       enabled: always

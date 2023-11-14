@@ -11,6 +11,8 @@ loan:
     - (853) 546-3467
 
 spring:
+  main:
+    allow-bean-definition-overriding: true
   output:
     ansi:
       enabled: always
