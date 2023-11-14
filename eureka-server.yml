@@ -1,5 +1,6 @@
 server:
   port: 8070
+  shutdown: graceful
 
 eureka:
   instance:
