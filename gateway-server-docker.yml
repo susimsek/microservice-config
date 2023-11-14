@@ -81,7 +81,7 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          jwk-set-uri: http://keycloak:7080/realms/master/protocol/openid-connect/certs
+          jwk-set-uri: http://keycloak:7080/realms/eazybank/protocol/openid-connect/certs
 
 eureka:
   instance:
