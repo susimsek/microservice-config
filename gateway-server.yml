@@ -10,10 +10,31 @@ spring:
       enabled: always
 
 management:
+  health:
+    readiness-state:
+      enabled: true
+    liveness-state:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    gateway:
+      enabled: true
+    health:
+      probes:
+        enabled: true
+  info:
+    env:
+      enabled: true
+  metrics:
+    tags:
+      application: ${spring.application.name}
   tracing:
-    enabled: true
     sampling:
       probability: 1.0
+    enabled: true
 
 springdoc:
   swagger-ui:
