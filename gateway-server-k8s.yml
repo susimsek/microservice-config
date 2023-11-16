@@ -5,7 +5,7 @@ spring:
     bootstrap-servers: http://kafka:9092
   data:
     redis:
-      host: redis
+      host: redis-master
       port: 6379
       password: "{cipher}72f6a7d004cec8a7558dd0a94bd59b3b10205cfdad18d890d510e57ed17c5d7f44554bd293cdd529d1192202dad75c3d9c5ef970f16dab4e0c4d66f2df708b38"
       timeout: 1s
@@ -18,7 +18,7 @@ spring:
           lower-case-service-id: true
       routes:
         - id: account-service
-          uri: lb://account
+          uri: http://account:8080
           predicates:
             - Path=/account/**, /eazybank/account/**
           filters:
@@ -29,7 +29,7 @@ spring:
                 name: accountCircuitBreaker
                 fallbackUri: forward:/contactSupport
         - id: loan-service
-          uri: lb://loan
+          uri: http://loan:8090
           predicates:
             - Path=/loan/**, /eazybank/loan/**
           filters:
@@ -45,7 +45,7 @@ spring:
                   factor: 2
                   basedOnPreviousValue: true
         - id: card-service
-          uri: lb://card
+          uri: http://card:9000
           predicates:
             - Path=/card/**, /eazybank/card/**
           filters:
@@ -71,9 +71,9 @@ spring:
         - RewritePath=/api/v1/.*?/(?<remaining>.*), /$\{remaining}
     kubernetes:
       discovery:
-        enabled: false
-      config:
-        enabled: false
+        all-namespaces: true
+      discoveryServer:
+        url: http://spring-cloud-kubernetes-discoveryserver:80/
   security:
     oauth2:
       resourceserver:
@@ -81,15 +81,10 @@ spring:
           jwk-set-uri: http://keycloak:7080/realms/eazybank/protocol/openid-connect/certs
 
 eureka:
-  instance:
-    preferIpAddress: true
   client:
-    fetchRegistry: true
-    registerWithEureka: true
-    serviceUrl:
-      defaultZone: http://eureka-server:8070/eureka/
+    enabled: false
 
 management:
   zipkin:
     tracing:
-      endpoint: http://tempo:9411
+      endpoint: http://tempo-grafana-tempo-distributor:9411
