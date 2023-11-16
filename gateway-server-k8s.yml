@@ -74,6 +74,10 @@ spring:
         all-namespaces: true
       discoveryServer:
         url: http://spring-cloud-kubernetes-discoveryserver:80/
+    discovery:
+      client:
+        health-indicator:
+          enabled: false
   security:
     oauth2:
       resourceserver:
