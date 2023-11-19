@@ -16,6 +16,8 @@ spring:
   output:
     ansi:
       enabled: always
+  liquibase:
+    contexts: qa
 
 management:
   endpoints:

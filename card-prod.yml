@@ -24,6 +24,8 @@ spring:
       enabled: false
     livereload:
       enabled: false
+  liquibase:
+    contexts: prod
 
 
 management:
