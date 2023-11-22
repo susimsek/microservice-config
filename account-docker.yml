@@ -60,7 +60,7 @@ eureka:
     fetchRegistry: true
     registerWithEureka: true
     serviceUrl:
-      defaultZone: http://eureka-server:8070/eureka/
+      defaultZone: http://easybank:root@eureka-server:8070/eureka/
 
 management:
   zipkin:

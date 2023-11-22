@@ -4,6 +4,12 @@ server:
 spring:
   kafka:
     bootstrap-servers: http://kafka:9092
+  security:
+    user:
+      name: easybank
+      password: "{cipher}9e37167bf33b458463119a7927279b4f53ea984472903a0c2b61197a8739714b"
+      roles: USER, ADMIN
+    content-security-policy: "script-src 'self'"
 
 management:
   zipkin:
