@@ -2,14 +2,16 @@ server:
   port: 8070
   shutdown: graceful
 
+
 eureka:
   instance:
     hostname: localhost
+    preferIpAddress: true
   client:
     fetchRegistry: false
     registerWithEureka: false
     serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+      defaultZone: http://${spring.security.user.name}:${spring.security.user.password}@${eureka.instance.hostname}:${server.port}/eureka/
 
 spring:
   main:
@@ -17,6 +19,12 @@ spring:
   output:
     ansi:
       enabled: always
+  security:
+    user:
+      name: easybank
+      password: "{cipher}9e37167bf33b458463119a7927279b4f53ea984472903a0c2b61197a8739714b"
+      roles: USER, ADMIN
+    content-security-policy: "script-src 'self'"
 
 management:
   endpoints:
