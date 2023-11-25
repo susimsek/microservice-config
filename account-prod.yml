@@ -26,6 +26,9 @@ spring:
       enabled: false
   liquibase:
     contexts: prod
+  logging:
+    loki:
+      enabled: true
 
 management:
   endpoints:
