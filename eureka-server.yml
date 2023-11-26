@@ -25,6 +25,9 @@ spring:
       password: "{cipher}9e37167bf33b458463119a7927279b4f53ea984472903a0c2b61197a8739714b"
       roles: USER, ADMIN
     content-security-policy: "script-src 'self'"
+  logging:
+    loki:
+      enabled: true
 
 management:
   endpoints:

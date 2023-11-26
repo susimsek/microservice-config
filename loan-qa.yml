@@ -18,6 +18,9 @@ spring:
       enabled: always
   liquibase:
     contexts: qa
+  logging:
+    loki:
+      enabled: true
 
 management:
   endpoints:

@@ -79,6 +79,9 @@ spring:
       resourceserver:
         jwt:
           jwk-set-uri: http://keycloak:7080/realms/eazybank/protocol/openid-connect/certs
+  logging:
+    loki:
+      url: http://gateway:3100/loki/api/v1/push
 
 eureka:
   instance:

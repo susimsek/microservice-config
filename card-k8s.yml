@@ -48,7 +48,9 @@ spring:
       discovery:
         all-namespaces: true
         discovery-server-url: http://spring-cloud-kubernetes-discoveryserver:80/
-
+  logging:
+    loki:
+      url: http://loki-grafana-loki-gateway/loki/api/v1/push
 eureka:
   client:
     enabled: false

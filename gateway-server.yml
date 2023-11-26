@@ -8,6 +8,9 @@ spring:
   output:
     ansi:
       enabled: always
+  logging:
+    loki:
+      enabled: true
 
 management:
   health:
