@@ -52,3 +52,10 @@ management:
 springdoc:
   oAuthFlow:
     tokenUrl: http://localhost:7080/realms/eazybank/protocol/openid-connect/token
+
+logging:
+  level:
+    ROOT: INFO
+    io.github.susimsek.loan: INFO
+  pattern:
+    level: '%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]'

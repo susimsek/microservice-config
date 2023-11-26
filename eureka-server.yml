@@ -50,3 +50,10 @@ management:
     sampling:
       probability: 1.0
     enabled: true
+
+logging:
+  level:
+    ROOT: INFO
+    io.github.susimsek.eurekaserver: INFO
+  pattern:
+    level: '%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]'
