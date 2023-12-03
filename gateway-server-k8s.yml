@@ -14,7 +14,7 @@ spring:
     gateway:
       routes:
         - id: account-service
-          uri: http://account:8080
+          uri: lb://account
           predicates:
             - Path=/account/**, /eazybank/account/**
           filters:
@@ -25,7 +25,7 @@ spring:
                 name: accountCircuitBreaker
                 fallbackUri: forward:/contactSupport
         - id: loan-service
-          uri: http://loan:8090
+          uri: lb://loan
           predicates:
             - Path=/loan/**, /eazybank/loan/**
           filters:
@@ -41,7 +41,7 @@ spring:
                   factor: 2
                   basedOnPreviousValue: true
         - id: card-service
-          uri: http://card:9000
+          uri: lb://card
           predicates:
             - Path=/card/**, /eazybank/card/**
           filters:
