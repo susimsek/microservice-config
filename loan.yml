@@ -62,6 +62,11 @@ spring:
   mvc:
     problemdetails:
       enabled: true
+  web:
+    locale: en
+  messages:
+    basename: i18n/messages
+    fallback-to-system-locale: false
 
 management:
   endpoints:
