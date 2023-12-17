@@ -31,13 +31,13 @@ management:
   info:
     env:
       enabled: true
-  metrics:
-    tags:
-      application: ${spring.application.name}
   tracing:
     sampling:
       probability: 1.0
     enabled: true
+  observations:
+    key-values:
+      application: ${spring.application.name}
 
 springdoc:
   swagger-ui:

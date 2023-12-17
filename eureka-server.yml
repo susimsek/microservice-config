@@ -43,13 +43,13 @@ management:
     health:
       probes:
         enabled: true
-  metrics:
-    tags:
-      application: ${spring.application.name}
   tracing:
     sampling:
       probability: 1.0
     enabled: true
+  observations:
+    key-values:
+      application: ${spring.application.name}
 
 logging:
   level:
