@@ -67,6 +67,12 @@ spring:
   messages:
     basename: i18n/messages
     fallback-to-system-locale: false
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+    deserialization:
+      fail-on-unknown-properties: false
+    default-property-inclusion: non_null
 
 management:
   endpoints:
