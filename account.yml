@@ -76,6 +76,8 @@ spring:
     deserialization:
       fail-on-unknown-properties: false
     default-property-inclusion: non_null
+  reactor:
+    context-propagation: auto
 
 management:
   endpoints:
