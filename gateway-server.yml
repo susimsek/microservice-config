@@ -11,6 +11,8 @@ spring:
   logging:
     loki:
       enabled: true
+  reactor:
+    context-propagation: auto
 
 management:
   health:
