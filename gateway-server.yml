@@ -13,6 +13,9 @@ spring:
       enabled: true
   reactor:
     context-propagation: auto
+  webflux:
+    problemdetails:
+      enabled: true
 
 management:
   health:
