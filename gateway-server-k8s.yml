@@ -64,8 +64,8 @@ spring:
         connect-timeout: 1000
         response-timeout: 5s
       default-filters:
-        - RewritePath=/api/v1/.*?/(?<remaining>.*), /$\{remaining}
         - TokenRelay
+        - RewritePath=/api/v1/.*?/(?<remaining>.*), /$\{remaining}
     kubernetes:
       discovery:
         all-namespaces: true
