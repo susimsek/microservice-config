@@ -24,6 +24,11 @@ spring:
   logging:
     loki:
       url: http://gateway:3100/loki/api/v1/push
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: http://keycloak:7080/realms/eazybank/protocol/openid-connect/certs
 
 eureka:
   instance:
