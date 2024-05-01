@@ -96,6 +96,13 @@ spring:
             client-secret: MS39GUVz3NDaIfY5aBM3U9kw4Kw6MvsF
             authorization-grant-type: client_credentials
             scope: openid, profile, email
+  cloud:
+    openfeign:
+      circuitbreaker:
+        enabled: true
+      oauth2:
+        enabled: true
+        clientRegistrationId: eazybank-client
 
 management:
   endpoints:
