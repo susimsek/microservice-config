@@ -78,6 +78,24 @@ spring:
     default-property-inclusion: non_null
   reactor:
     context-propagation: auto
+  webclient:
+    httpclient:
+      config:
+        connect-timeout: 5000
+        read-timeout: 10000
+        write-timeout: 10000
+    oauth2:
+      clientRegistrationId: eazybank-client
+  security:
+    oauth2:
+      client:
+        registration:
+          eazybank-client:
+            provider: keycloak
+            client-id: eazybank-callcenter
+            client-secret: MS39GUVz3NDaIfY5aBM3U9kw4Kw6MvsF
+            authorization-grant-type: client_credentials
+            scope: openid, profile, email
 
 management:
   endpoints:
@@ -125,10 +143,3 @@ feign:
       default:
         connectTimeout: 5000
         readTimeout: 10000
-
-httpclient:
-  config:
-    default:
-      connectTimeout: 5000
-      readTimeout: 10000
-      writeTimeout: 10000
