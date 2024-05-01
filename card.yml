@@ -77,6 +77,14 @@ spring:
     websocket:
       path: /subscriptions
       connection-init-timeout: 60s
+  cloud:
+    function:
+      definition: processCardDebeziumEvent
+    stream:
+      bindings:
+        processCardDebeziumEvent-in-0:
+          destination: pg-changes.public.card
+          group: ${spring.application.name}
 
 management:
   endpoints:
