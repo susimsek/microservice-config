@@ -73,6 +73,10 @@ spring:
     deserialization:
       fail-on-unknown-properties: false
     default-property-inclusion: non_null
+  graphql:
+    websocket:
+      path: /subscriptions
+      connection-init-timeout: 60s
 
 management:
   endpoints:
